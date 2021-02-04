@@ -182,9 +182,9 @@ class GameProcess {
         }
         if (this.findProcessByName(this.targetProcessName, this.gameProcess) == 0) {
             writeln("Waiting for the game to appear...");
-        }
-        while (this.findProcessByName(this.targetProcessName, this.gameProcess) == 0 && !this.forceStop) {
-            Sleep(10);
+            while (this.findProcessByName(this.targetProcessName, this.gameProcess) == 0 && !this.forceStop) {
+                Sleep(10);
+            }
         }
         while (this.getThreadByProcess(gameProcess.th32ProcessID) == 0 && !this.forceStop) {
             Sleep(10);
